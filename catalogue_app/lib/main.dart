@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'Screens/home_page.dart';
 import 'Screens/login_page.dart';
 import 'package:meta/meta.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,10 @@ class MyApp extends StatelessWidget {
     justABasicFunc(bol: true);
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
       darkTheme: ThemeData(brightness: Brightness.dark),
       //routes ====> specify different screen paths in path routes
       initialRoute: "/login",
