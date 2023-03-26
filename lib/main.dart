@@ -1,4 +1,5 @@
 import 'package:catalogue_app/Screens/home_page.dart';
+import 'package:catalogue_app/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'Screens/home_page.dart';
 import 'Screens/login_page.dart';
@@ -23,10 +24,13 @@ class MyApp extends StatelessWidget {
       ),
       darkTheme: ThemeData(brightness: Brightness.dark),
       //routes ====> specify different screen paths in path routes
+      // initialRoute: MyRoutes.loginRoute,
       initialRoute: "/login",
       routes: {
-        "/": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        // "/": (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        // : (context) => LoginPage(),
       },
     );
   }
