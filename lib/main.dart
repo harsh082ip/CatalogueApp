@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData(brightness: Brightness.dark),
       //routes ====> specify different screen paths in path routes
       // initialRoute: MyRoutes.loginRoute,
-      initialRoute: "/login",
+      debugShowCheckedModeBanner: false,
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         // "/": (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
