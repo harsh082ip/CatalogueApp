@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       //routes ====> specify different screen paths in path routes
       // initialRoute: MyRoutes.loginRoute,
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         // "/": (context) => HomePage(),
         MyRoutes.loginRoute: (context) => LoginPage(),
