@@ -1,5 +1,8 @@
+import 'package:catalogue_app/models/catalog.dart';
 import 'package:catalogue_app/widgets/drawer.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/item-widget.dart';
 
 class HomePage extends StatelessWidget {
   var name = 'harsh';
@@ -9,8 +12,17 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Catalogue App"),
       ),
-      body: Center(
-        child: Text("My name is Harsh"),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: CatalogueModel.Items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: CatalogueModel.Items[index],
+              key: ValueKey(CatalogueModel.Items[index].id),
+            );
+          },
+        ),
       ),
       drawer: MyDrawer(),
     );
