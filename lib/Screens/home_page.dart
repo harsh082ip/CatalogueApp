@@ -8,6 +8,7 @@ class HomePage extends StatelessWidget {
   var name = 'harsh';
   @override
   Widget build(BuildContext context) {
+    final dummyList = List.generate(20, (index) => CatalogueModel.Items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalogue App"),
@@ -15,11 +16,12 @@ class HomePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
-          itemCount: CatalogueModel.Items.length,
+          //class catalogue model is called, in which it's asking length of array Items
+          itemCount: dummyList.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: CatalogueModel.Items[index],
-              key: ValueKey(CatalogueModel.Items[index].id),
+              item: dummyList[index],
+              key: ValueKey(dummyList[index].id),
             );
           },
         ),

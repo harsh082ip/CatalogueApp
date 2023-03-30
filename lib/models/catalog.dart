@@ -7,7 +7,7 @@ class CatalogueModel {
       price: 999,
       color: "#33505a",
       image: "https://m.media-amazon.com/images/I/71WrL1PJ27L._AC_SY679_.jpg",
-    )
+    ),
   ];
 }
 
