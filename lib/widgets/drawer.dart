@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageurl =
-        "https://pps.whatsapp.net/v/t61.24694-24/323053441_546216777436915_9071446320041512910_n.jpg?ccb=11-4&oh=01_AdQV4Gue3oQwm5-GxNc86R6W3lsLbBSivadbM7qbdsjaZQ&oe=642F3331";
+        "https://pps.whatsapp.net/v/t61.24694-24/323053441_546216777436915_9071446320041512910_n.jpg?ccb=11-4&oh=01_AdTYfYWpdec6zhg3-cmaTXGdT30VpEItDV9WVABNiCohBQ&oe=643FADF1";
     return Drawer(
       child: Container(
         color: Colors.deepPurple,
@@ -18,10 +18,10 @@ class MyDrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
                 margin: EdgeInsets.zero,
-                accountName: Text(
+                accountName: const Text(
                   "Harsh Vardhan Singh",
                 ),
-                accountEmail: Text("lionrbl6@gmail.com"),
+                accountEmail: const Text("lionrbl6@gmail.com"),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(imageurl),
                 ),
@@ -48,7 +48,7 @@ class MyDrawer extends StatelessWidget {
               onTap: () {
                 print("Button Clicked");
               },
-              leading: Icon(
+              leading: const Icon(
                 CupertinoIcons.profile_circled,
                 color: Colors.white,
               ),

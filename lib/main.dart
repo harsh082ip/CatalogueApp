@@ -4,11 +4,9 @@ import 'package:catalogue_app/widgets/themes.dart';
 import 'package:flutter/material.dart';
 import 'Screens/home_page.dart';
 import 'Screens/login_page.dart';
-import 'package:meta/meta.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -24,10 +22,10 @@ class MyApp extends StatelessWidget {
       //routes ====> specify different screen paths in path routes
       // initialRoute: MyRoutes.loginRoute,
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         // "/": (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.loginRoute: (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
         // : (context) => LoginPage(),
       },
